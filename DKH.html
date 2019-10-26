@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lua Simple XOR Encrypt</title>
+    <title>루아 스크립트 DKH 난독화툴</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </head>
@@ -13,11 +13,10 @@
             <div class="container">
                 <div class="columns">
                     <div class="column is-two-thirds-tablet is-three-quarter-desktop">
-                        <h1 class="title">Lua Simple XOR Encrypt</h1>
-                        <p>Ask user to input the decrypt key. XOR each bytes with the given key. eval the decrypted script.</p>
+                        <h1 class="title">루아 스크립트 DKH 난독화툴</h1>
+                        <p>원하시는 스크립트를 선택해 난독화 후 다운로드가 가능합니다.</p>
                     </div>
                     <div class="column is-three-quarters-mobile is-one-thirds-tablet is-one-quarter-desktop">
-                        <img src="images/xor.gif" alt="xor">
                     </div>
                 </div>
             </div>
@@ -29,42 +28,42 @@
                 <div class="column is-two-thirds-tablet is-half-desktop">
                     <div class="form">
                         <div class="field">
-                            <label class="label">Lua File</label>
+                            <label class="label">파일 선택하기</label>
                             <div class="control">
                                 <div class="file has-name">
                                     <label class="file-label">
                                         <input class="file-input" type="file" accept=".lua,.txt" id="file">
-                                        <span class="file-cta"><span class="file-icon"><i class="fas fa-upload"></i></span><span class="file-label">Select File…</span></span>
-                                        <span class="file-name" id="file-name">No file selected.</span>
+                                        <span class="file-cta"><span class="file-icon"><i class="fas fa-upload"></i></span><span class="file-label">파일 선택하기</span></span>
+                                        <span class="file-name" id="file-name">파일이 선택되지 않았습니다.</span>
                                     </label>
                                 </div>
                             </div>
-                            <p class="help">You file won't be uploaded to any server. All operations are done on your own computer.</p>
+                            <p class="help">MADE BY DKH</p>
                         </div>
                         <div class="field">
-                            <label class="label">Password</label>
+                            <label class="label">비밀번호 (필수)</label>
                             <div class="control">
-                                <input class="input" type="text" id="key" placeholder="Encrypt and decrypt key">
+                                <input class="input" type="text" id="key" placeholder="원하는 비밀번호를 입력해주세요.">
                             </div>
-                            <p class="help">The key to encrypt and decrypt the file.</p>
+                            <p class="help">암호화는 스크립트 보안에는 필수!</p>
                         </div>
                         <div class="field">
-                            <label class="label">Settings</label>
+                            <label class="label">부가 설정</label>
                             <div class="control">
                                 <div class="select">
                                     <select id="settings">
-                                        <option value="gg">Game Guardian script (Lua 5.2 load, gg.prompt input key, gg.alert key error)</option>
-                                        <option value="51">Logitech macros (Lua 5.1 loadstring, edit key manually, print key error)</option>
-                                        <option value="52">Common Lua 5.2 (Lua 5.2 load, edit key manually, print key error)</option>
-                                        <option value="51">Common Lua 5.1 (Same as Logitech macros)</option>
+                                        <option value="gg">게임가디언 스크립트 (Game Guardian Script)</option>
+                                        <option value="51">Logitech macro</option>
+                                        <option value="52">Lua 5.2</option>
+                                        <option value="51">Lua 5.1</option>
                                     </select>
                                 </div>
                             </div>
-                            <p class="help">Please select from the preset settings. You can preview the templates in the following section.</p>
+                            <p class="help">루아 스크립트의 종류를 선택해주세요.</p>
                         </div>
                         <div class="field">
                             <div class="control">
-                                <button class="button is-link is-medium" id="encrypt"><span class="file-icon"><i class="fas fa-download"></i></span> Encrypt</button>
+                                <button class="button is-link is-medium" id="암호화 시작하기"><span class="file-icon"><i class="fas fa-download"></i></span> Encrypt</button>
                             </div>
                         </div>
                     </div>
